@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This is some text.
+  </div>
+
+  <script>
+    // Solution for accessing a non-existent attribute
+    let element = document.getElementById("myDiv");
+    let text = element.hasAttribute("nonExistentAttribute") ? element.getAttribute("nonExistentAttribute") : null; 
+    console.log(text); // Outputs null safely
+
+    // Solution for manipulating a non-existent element
+    let element2 = document.getElementById('doesNotExist');
+    if(element2){
+        element2.style.display = 'none';
+    } else {
+        console.error('Element doesNotExist not found.');
+    }
+
+  </script>
+</body>
+</html>
