@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error</title>
+</head>
+<body>
+  <div id="myDiv">
+    This is some text.
+  </div>
+
+  <script>
+    // Attempting to access a non-existent attribute
+    let text = document.getElementById("myDiv").getAttribute("nonExistentAttribute");
+    console.log(text); // Outputs null
+
+    //Another uncommon error
+    document.getElementById('doesNotExist').style.display = 'none'; // Throws an error in the console
+  </script>
+</body>
+</html>
